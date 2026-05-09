@@ -6,7 +6,7 @@ EstudianteController.getEstudiantes = async (req, res) => {
     try {
         const estudiantes = await EstudiantesModel.find()
         return res.status(200).json(estudiantes)
-    } catch (error) {
+    } catch (error) {   
         console.log("error"+error)
         return res.status(500).json({message: "Internal server error"})
     }

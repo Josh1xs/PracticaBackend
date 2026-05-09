@@ -1,14 +1,14 @@
-import mongoose  from "mongoose";
+import mongoose, { disconnect }  from "mongoose";
 
 mongoose.connect("mongodb://localhost:27017/Escuela")
 
 const connection = mongoose.connection
 
-connection.on(open, () => {
+connection.on("open", () => {
 console.log("Base de datos conectada")
 })
 
-connection.on(open,  () => {
+connection.on(disconnect,  () => {
     console.log("Base de datos desconectada")
 })
 
