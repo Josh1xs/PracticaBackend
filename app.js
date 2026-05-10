@@ -5,6 +5,7 @@ import registerMaestro from "./src/Routes/registerMaestros.js"
 import loginEstudiantes from "./src/Routes/loginEstudiantes.js"
 import loginMaestros from "./src/Routes/loginMaestros.js"
 import logout from "./src/Routes/logout.js"
+import recoverypassword from "./src/Routes/recoveryPassword.js"
 import cookieParser from "cookie-parser";
 const app = express();
 
@@ -20,6 +21,7 @@ app.use("/api/register/maestros", registerMaestro)
 app.use("/api/login/estudiantes", loginEstudiantes)
 app.use("/api/login/maestros", loginMaestros)
 app.use("/api/logout", logout)
+app.use("/api/recoveryPassword", recoverypassword)
 
 
 export default app;
