@@ -1,6 +1,10 @@
 import express from "express"
 import estudiantesRoutes from "./src/Routes/estudiantes.js"
 import registerEstudiantes from "./src/Routes/registerEstudiantes.js"
+import registerMaestro from "./src/Routes/registerMaestros.js"
+import loginEstudiantes from "./src/Routes/loginEstudiantes.js"
+import loginMaestros from "./src/Routes/loginMaestros.js"
+import logout from "./src/Routes/logout.js"
 import cookieParser from "cookie-parser";
 const app = express();
 
@@ -12,5 +16,10 @@ app.use(cookieParser());
 
 app.use("/api/estudiantes", estudiantesRoutes)
 app.use("/api/register/estudiantes", registerEstudiantes)
+app.use("/api/register/maestros", registerMaestro)
+app.use("/api/login/estudiantes", loginEstudiantes)
+app.use("/api/login/maestros", loginMaestros)
+app.use("/api/logout", logout)
+
 
 export default app;

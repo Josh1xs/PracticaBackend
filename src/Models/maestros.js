@@ -31,4 +31,4 @@ const maestrosSchema = new Schema ({
 })
 
 
-export default model("Maestros", customerSchema)
+export default model("Maestros", maestrosSchema)
