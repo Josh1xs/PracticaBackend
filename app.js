@@ -6,6 +6,7 @@ import loginEstudiantes from "./src/Routes/loginEstudiantes.js"
 import loginMaestros from "./src/Routes/loginMaestros.js"
 import logout from "./src/Routes/logout.js"
 import recoverypassword from "./src/Routes/recoveryPassword.js"
+import laboratorios from "./src/Routes/laboratorios.js"
 import cookieParser from "cookie-parser";
 const app = express();
 
@@ -13,7 +14,7 @@ const app = express();
 app.use(express.json())
 app.use(cookieParser());
 
-
+app.use("/api/laboratorios", laboratorios)
 
 app.use("/api/estudiantes", estudiantesRoutes)
 app.use("/api/register/estudiantes", registerEstudiantes)
